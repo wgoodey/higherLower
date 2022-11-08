@@ -76,13 +76,13 @@ def game():
         # if user is incorrect, game is over. display score
         print(f"\n{a['name']}: {a['follower_count']} Million\n{b['name']}: {b['follower_count']} Million")
         if answer == guess:
-            print(f"\nYou got it!\nHere's the next one:\n")
             score += 1
+            print(f"\nYou got it! Your current score is {score}.\nHere's the next one:\n")
             a = b
             b = get_new(data, history)
         else:
             print("\nSorry, You lost.")
-            print(f"Your score was {score}.")
+            print(f"Your final score is {score}.")
             break
 
     # ask if user wants to play again
